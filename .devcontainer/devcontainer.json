@@ -1,0 +1,9 @@
+{
+  "name": "Tienda WordPress",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "forwardPorts": [8080, 8081],
+  "portsAttributes": {
+    "8080": { "label": "Tienda WordPress" },
+    "8081": { "label": "phpMyAdmin" }
+  }
+}
