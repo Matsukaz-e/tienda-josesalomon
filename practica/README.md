@@ -1,5 +1,7 @@
 # Café de Origen — práctica académica
 
+Equipo: **josesalomon**. Repositorio público: https://github.com/Matsukaz-e/tienda-josesalomon
+
 Tienda de demostración con WordPress, WooCommerce, MariaDB y Google Analytics 4. Los productos, imágenes y pedidos son ficticios: no se realizan cobros ni entregas.
 
 ## Acceso
@@ -23,4 +25,12 @@ El ID de Analytics debe configurarse en WooCommerce > Ajustes > Integración. El
 
 Git conserva estos archivos de configuración; no respalda la base de datos ni el volumen de imágenes. Exporta la base de datos y conserva los archivos de WordPress si vas a eliminar el Codespace. No uses `docker compose down -v`: elimina los volúmenes. Detén el Codespace cuando no lo uses y arráncalo antes de presentar la tienda.
 
-Para la entrega, verifica desde un móvil con datos, recoge capturas de los pedidos, Tiempo real y DebugView, y revisa los informes de Analytics después de 24–48 horas. Los datos de prueba no permiten conclusiones comerciales reales.
+El 7 de octubre de 2026 se completó la prueba desde un móvil con datos, sin iniciar sesión. Se conservan capturas de los pedidos iniciales #37 y #38, Tiempo real (2 purchase) y DebugView. En la revisión posterior existe además #39; no se hicieron pedidos nuevos durante la auditoría.
+
+El ID se comprobó en los ajustes de WooCommerce, en el flujo Web de Analytics y en el HTML servido a visitantes. La cuenta de Analytics se llama josesalomon, con propiedad Café de Origen - GA4, Colombia/COP.
+
+Informes provisionales del 7 de octubre: café variable 3 vistas, kit 2 y Huila 1; los tres empatan con una unidad comprada. Exploración cerrada «Embudo josesalomon - 4 eventos», con view_item → add_to_cart → begin_checkout → purchase: 1 usuario activo en cada paso, sin abandono. Dispositivos: 3 de 5 usuarios activos móviles (60%), incluidos visitantes de prueba y simulación móvil. La muestra no permite conclusiones comerciales reales.
+
+Pendientes: comparar fuente/medio de la campaña clase/practica/cafe_origen frente a directo cuando la atribución se estabilice (24–48 horas), registrar la URL en la hoja del curso cuando el profesor facilite el enlace y realizar el intercambio de tráfico entre equipos. Las pruebas documentadas fueron como visitante; no se conserva evidencia específica del modo incógnito.
+
+Al reabrir el Codespace revisa que 8080 siga público y 8081 privado. Mantén el proyecto en su directorio original para conservar la asociación de Docker Compose con los volúmenes existentes; renombrar el repositorio no requiere mover ese directorio.
